@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class KafkaMessageListener {
     Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
 
-    @KafkaListener(topics = "javatechie-demo",groupId = "jt-group")
+    @KafkaListener(topics = "javatechie-demo4",groupId = "jt-group-1")
     public void consumeEvents(Customer customer) {
         log.info("consumer consume the events {} ", customer.toString());
     }

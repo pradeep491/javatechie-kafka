@@ -32,7 +32,7 @@ public class KafkaMessagePublisher {
     }
     public void sendEventsToTopic(Customer customer) {
         try {
-            CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("javatechie-demo3", customer);
+            CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("javatechie-demo4", customer);
             future.whenComplete((result, ex) -> {
                 if (ex == null) {
                     System.out.println("Sent message=[" + customer.toString() +
